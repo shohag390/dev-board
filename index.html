@@ -4,20 +4,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="shortcut icon" href="./assets/board.png" type="image/x-icon">
+    <title>Job Board</title>
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="./styles/styles.css">
     <script src="https://kit.fontawesome.com/9753b0a825.js" crossorigin="anonymous"></script>
 </head>
 
-<body class="bg-[#f4f7ff] md:px-[90px] px-[20px] md:py-[15px]">
+<body class="bg-[#f4f7ff] md:px-[160px] px-[20px] md:py-[15px]">
     <!-- Header Section -->
-    <header>
-
+    <header class="shadow-md w-full h-[10vh] bg-[#ffffff] rounded-2xl flex justify-between items-center px-[20px]">
+        <a class="flex items-center gap-[10px]" href="#">
+            <img class="h-[40px]" src="./assets/logo.png" alt="logo">
+            <h4 class="text-[23px]">Dev<span class="font-bold">Board</span></h4>
+        </a>
+        <div class="flex items-center gap-[30px]">
+            <div class="flex items-center gap-[8px] bg-[#f4f7ff] px-[20px] py-[7px] rounded-full">
+                <img class="h-[22px]" src="./assets/checkbox.png" alt="icone">
+                <p class="font-bold text-[22px]">23</p>
+            </div>
+            <div class="p-[8px] bg-[#f4f7ff] rounded-full">
+                <img src="./assets/theme-btn.png" alt="">
+            </div>
+        </div>
     </header>
 
     <!-- Main Section -->
-    <main></main>
+    <main class="flex justify-between gap-[25px] pt-[25px]">
+        <div class="bg-[#ffffff] rounded-2xl w-[75%] h-[90vh] p-[20px]">
+            <div>
+                <div class="">
+                    <img src="./assets/checkbox.png" alt="icone">
+                    <div>
+                        <h4>Task Assiged</h4>
+                        <h4>6</h4>
+                    </div>
+                </div>
+                <div>
+                    <img src="./assets/board.png" alt="">
+                    <h2>Discover Something New Today!</h2>
+                </div>
+                <div>
+                    <figure>
+                        <img src="./assets/calender.pngs" alt="">
+                    </figure>
+                    <h4 id="date"></h4>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <h4>Shop Easy</h4>
+                    <h2>Fix Mobile Button Issue</h2>
+                    <p>A Card Component has a figure a body part, and inside body there are title and actions parts</p>
+                    <div>
+                        <div><button>Completed</button></div>
+                        <div><button>Completed</button></div>
+                    </div>
+                </div>
+                <div>
+                    <h4>Shop Easy</h4>
+                    <h2>Fix Mobile Button Issue</h2>
+                    <p>A Card Component has a figure a body part, and inside body there are title and actions parts</p>
+                    <div>
+                        <div>
+                            <h4>Deadline</h4>
+                            <p>21 March 2025</p>
+                        </div>
+                        <div><button>Completed</button></div>
+                    </div>
+                </div>
+                <div>
+                    <h4>Shop Easy</h4>
+                    <h2>Fix Mobile Button Issue</h2>
+                    <p>A Card Component has a figure a body part, and inside body there are title and actions parts</p>
+                    <div>
+                        <div>
+                            <h4>Deadline</h4>
+                            <p>21 March 2025</p>
+                        </div>
+                        <div><button>Completed</button></div>
+                    </div>
+                </div>
+                <div>
+                    <h4>Shop Easy</h4>
+                    <h2>Fix Mobile Button Issue</h2>
+                    <p>A Card Component has a figure a body part, and inside body there are title and actions parts</p>
+                    <div>
+                        <div>
+                            <h4>Deadline</h4>
+                            <p>21 March 2025</p>
+                        </div>
+                        <div><button>Completed</button></div>
+                    </div>
+                </div>
+                <div>
+                    <h4>Shop Easy</h4>
+                    <h2>Fix Mobile Button Issue</h2>
+                    <p>A Card Component has a figure a body part, and inside body there are title and actions parts</p>
+                    <div>
+                        <div>
+                            <h4>Deadline</h4>
+                            <p>21 March 2025</p>
+                        </div>
+                        <div><button>Completed</button></div>
+                    </div>
+                </div>
+                <div>
+                    <h4>Shop Easy</h4>
+                    <h2>Fix Mobile Button Issue</h2>
+                    <p>A Card Component has a figure a body part, and inside body there are title and actions parts</p>
+                    <div>
+                        <div>
+                            <h4>Deadline</h4>
+                            <p>21 March 2025</p>
+                        </div>
+                        <div><button>Completed</button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-[#ffffff] rounded-2xl w-[25%] h-[90vh] p-[20px]"></div>
+    </main>
 
     <script src="./js/script.js"></script>
 </body>
