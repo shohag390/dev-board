@@ -21,11 +21,12 @@
         <div class="flex items-center gap-[30px]">
             <div class="flex items-center gap-[8px] bg-[#f4f7ff] px-[20px] py-[7px] rounded-full">
                 <img class="h-[22px]" src="./assets/checkbox.png" alt="icone">
-                <p class="font-bold text-[22px]">23</p>
+                <p id="addCount" class="font-bold text-[22px]">23</p>
             </div>
-            <div class="p-[8px] bg-[#f4f7ff] rounded-full">
+            <button class="p-[8px] bg-[#f4f7ff] rounded-full transition-transform duration-300" id="rotateBtn"
+                onclick="changeBgColor()">
                 <img src="./assets/theme-btn.png" alt="">
-            </div>
+            </button>
         </div>
     </header>
 
@@ -33,18 +34,18 @@
     <main class="grid grid-cols-4 gap-[25px] pt-[25px]">
         <div class="bg-[#ffffff] col-span-3 rounded-2xl h-full w-full p-[20px]">
             <div
-                class="flex items-center justify-between gap-[20px] pb-[30px] border-b-[3px] border-[#e3eafb] border-dashed">
+                class="flex items-center justify-between gap-[20px] pb-[30px] border-b-[3px] border-[#e3eafb] border-dasheds">
                 <div class="bg-[#f4f7ff] w-[25%]  h-[180px] rounded-2xl flex items-center justify-center gap-[18px]">
                     <figure class="h-[60px] w-[60px] bg-[#fff] flex items-center justify-center rounded-full">
                         <img src="./assets/checkbox.png" alt="icone">
                     </figure>
                     <div>
                         <h4 class="font-medium text-[18px]">Task Assiged</h4>
-                        <h4 class="font-bold text-[25px]">6</h4>
+                        <h4 id="taskAssiged" class="font-bold text-[25px]">6</h4>
                     </div>
                 </div>
-                <div
-                    class="w-[50%] bg-gradient-to-l from-[#8397fa] to-[#5371fe] h-[180px] rounded-2xl flex items-center justify-center gap-[18px]">
+                <div id="question"
+                    class="w-[50%] cursor-pointer bg-gradient-to-l from-[#8397fa] to-[#5371fe] h-[180px] rounded-2xl flex items-center justify-center gap-[18px]">
                     <img class="h-[105px]" src="./assets/board.png" alt="">
                     <h2 class="text-[#fff] text-[22px] font-medium">Discover Something New Today!</h2>
                 </div>
@@ -58,26 +59,145 @@
             <div class="grid grid-cols-3 gap-[20px] pt-[50px]">
                 <div class="bg-[#f4f7ff] p-[25px] rounded-2xl">
                     <h4 class="py-[10px] px-[40px] rounded-full bg-[#fff] font-bold inline-block">Shop Easy</h4>
-                    <h2 class="font-bold text-[22px] py-[14px]">Fix Mobile Button Issue</h2>
-                    <p class="text-[16px] font-medium text-gray-500 bg-[#fff] p-[15px] rounded-md">A Card Component has
-                        a figure a
-                        body
-                        part, and
-                        inside body there
-                        are title
-                        and actions parts</p>
+                    <h2 class="cardHeader font-bold text-[22px] py-[14px]">Fix Mobile Button Issue</h2>
+                    <p class="text-[16px] font-medium text-gray-500 bg-[#fff] p-[15px] rounded-md">
+                        A Card Component has a figure a body part, and inside body there are title
+                        and actions parts
+                    </p>
                     <div class="pt-[22px] flex items-center justify-between">
                         <div>
-
+                            <p class="text-[18px] text-gray-500">Deadline</p>
+                            <p class="cardDate text-[16px] font-medium">18 March 2006</p>
                         </div>
-                        <div><button
-                                class="py-[12px] px-[30px] bg-[#3752FD] text-[#fff] font-medium text-[17px] rounded-lg">Completed</button>
+                        <div>
+                            <button onclick="cardBtn(this)" data-card-header="Fix Mobile Button Issue"
+                                data-card-date="18 March 2006"
+                                class="card-btn py-[12px] px-[30px] bg-[#3752FD] text-[#fff] font-medium text-[17px] rounded-lg">
+                                Completed
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-[#f4f7ff] p-[25px] rounded-2xl">
+                    <h4 class="py-[10px] px-[40px] rounded-full bg-[#fff] font-bold inline-block">Soft Pay</h4>
+                    <h2 class="cardHeader font-bold text-[22px] py-[14px]">Add Pay Success Modal</h2>
+                    <p class="text-[16px] font-medium text-gray-500 bg-[#fff] p-[15px] rounded-md">
+                        A Card Component has a figure a body part, and inside body there are title
+                        and actions parts
+                    </p>
+                    <div class="pt-[22px] flex items-center justify-between">
+                        <div>
+                            <p class="text-[18px] text-gray-500">Deadline</p>
+                            <p class="cardDate text-[16px] font-medium">16 April 2006</p>
+                        </div>
+                        <div>
+                            <button onclick="cardBtn(this)" data-card-header="Add Pay Success Modal"
+                                data-card-date="16 April 2006"
+                                class="card-btn py-[12px] px-[30px] bg-[#3752FD] text-[#fff] font-medium text-[17px] rounded-lg">
+                                Completed
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-[#f4f7ff] p-[25px] rounded-2xl">
+                    <h4 class="py-[10px] px-[40px] rounded-full bg-[#fff] font-bold inline-block">Meta</h4>
+                    <h2 class="cardHeader font-bold text-[22px] py-[14px]">Add New Reaction</h2>
+                    <p class="text-[16px] font-medium text-gray-500 bg-[#fff] p-[15px] rounded-md">
+                        A Card Component has a figure a body part, and inside body there are title
+                        and actions parts
+                    </p>
+                    <div class="pt-[22px] flex items-center justify-between">
+                        <div>
+                            <p class="text-[18px] text-gray-500">Deadline</p>
+                            <p class="cardDate text-[16px] font-medium">31 March 2025</p>
+                        </div>
+                        <div>
+                            <button onclick="cardBtn(this)" data-card-header="Add New Reaction"
+                                data-card-date="31 March 2025"
+                                class="card-btn py-[12px] px-[30px] bg-[#3752FD] text-[#fff] font-medium text-[17px] rounded-lg">
+                                Completed
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-[#f4f7ff] p-[25px] rounded-2xl">
+                    <h4 class="py-[10px] px-[40px] rounded-full bg-[#fff] font-bold inline-block">Programming Hero</h4>
+                    <h2 class="cardHeader font-bold text-[22px] py-[14px]">Fix Video Loading Issue</h2>
+                    <p class="text-[16px] font-medium text-gray-500 bg-[#fff] p-[15px] rounded-md">
+                        A Card Component has a figure a body part, and inside body there are title
+                        and actions parts
+                    </p>
+                    <div class="pt-[22px] flex items-center justify-between">
+                        <div>
+                            <p class="text-[18px] text-gray-500">Deadline</p>
+                            <p class="cardDate text-[16px] font-medium">21 March 2025</p>
+                        </div>
+                        <div>
+                            <button onclick="cardBtn(this)" data-card-header="Fix Video Loading Issue"
+                                data-card-date="21 March 2025"
+                                class="card-btn py-[12px] px-[30px] bg-[#3752FD] text-[#fff] font-medium text-[17px] rounded-lg">
+                                Completed
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-[#f4f7ff] p-[25px] rounded-2xl">
+                    <h4 class="py-[10px] px-[40px] rounded-full bg-[#fff] font-bold inline-block">Google LLC</h4>
+                    <h2 class="cardHeader font-bold text-[22px] py-[14px]">Integrate Al Seacrh</h2>
+                    <p class="text-[16px] font-medium text-gray-500 bg-[#fff] p-[15px] rounded-md">
+                        A Card Component has a figure a body part, and inside body there are title
+                        and actions parts
+                    </p>
+                    <div class="pt-[22px] flex items-center justify-between">
+                        <div>
+                            <p class="text-[18px] text-gray-500">Deadline</p>
+                            <p class="cardDate text-[16px] font-medium">1 April 2025</p>
+                        </div>
+                        <div>
+                            <button onclick="cardBtn(this)" data-card-header="Integrate Al Seacrh"
+                                data-card-date="1 April 2025"
+                                class="card-btn py-[12px] px-[30px] bg-[#3752FD] text-[#fff] font-medium text-[17px] rounded-lg">
+                                Completed
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-[#f4f7ff] p-[25px] rounded-2xl">
+                    <h4 class="py-[10px] px-[40px] rounded-full bg-[#fff] font-bold inline-block">Polygon Tech</h4>
+                    <h2 class="cardHeader font-bold text-[22px] py-[14px]">Review Ami Probashi Site</h2>
+                    <p class="text-[16px] font-medium text-gray-500 bg-[#fff] p-[15px] rounded-md">
+                        A Card Component has a figure a body part, and inside body there are title
+                        and actions parts
+                    </p>
+                    <div class="pt-[22px] flex items-center justify-between">
+                        <div>
+                            <p class="text-[18px] text-gray-500">Deadline</p>
+                            <p class="cardDate text-[16px] font-medium">5 May 2025</p>
+                        </div>
+                        <div>
+                            <button onclick="cardBtn(this)" data-card-header="Review Ami Probashi Site"
+                                data-card-date="5 May 2025"
+                                class="card-btn py-[12px] px-[30px] bg-[#3752FD] text-[#fff] font-medium text-[17px] rounded-lg">
+                                Completed
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="bg-[#ffffff] rounded-2xl w-full h-full p-[20px]"></div>
+        <div class="bg-[#ffffff] rounded-2xl w-full h-full p-[20px]">
+            <div>
+                <div>
+                    <img src="./assets/activity.png" alt="icone">
+                    <h4>Activity Log</h4>
+                </div>
+                <button id="clear-btn"
+                    class="py-[12px] px-[30px] bg-[#3752FD] text-[#fff] font-medium text-[17px] rounded-lg">
+                    Clear History
+                </button>
+            </div>
+            <ul id="listItem"></ul>
+        </div>
     </main>
 
     <script src="./js/script.js"></script>
