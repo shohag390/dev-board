@@ -36,8 +36,9 @@ function cardBtn(btn) {
         li.innerText = "You have Complete The Task" + " " + cardHeader + " " + "At" + " " + cardDate;
         li.style.backgroundColor = "#f4f7ff"
         li.style.color = "#000000"
-        li.style.padding = "20px"
+        li.style.padding = "15px"
         li.style.borderRadius = "10px"
+        li.style.fontSize = "15px"
         listItem.appendChild(li)
         alert("Board updated Successfully")
     }

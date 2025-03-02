@@ -11,179 +11,188 @@
     <script src="https://kit.fontawesome.com/9753b0a825.js" crossorigin="anonymous"></script>
 </head>
 
-<body class="bg-[#f4f7ff] md:px-[100px] px-[20px] md:py-[15px] font-[Poppins]">
+<body class="bg-[#f4f7ff] md:px-[120px] px-[20px] md:py-[15px]">
     <!-- Header Section -->
-    <header class="shadow-md w-full h-[10vh] bg-[#ffffff] rounded-2xl flex justify-between items-center px-[20px]">
+    <header class="shadow-md w-full md:h-[10vh] bg-[#ffffff] rounded-2xl flex justify-between items-center px-[20px]">
         <a class="flex items-center gap-[10px]" href="#">
-            <img class="h-[40px]" src="./assets/logo.png" alt="logo">
-            <h4 class="text-[23px] text-[#00303C]">Dev<span class="font-bold">Board</span></h4>
+            <img class="h-[35px]" src="./assets/logo.png" alt="logo">
+            <h4 class="text-[20px] text-[#00303C]">Dev<span class="font-bold">Board</span></h4>
         </a>
-        <div class="flex items-center gap-[30px]">
-            <div class="flex items-center gap-[8px] bg-[#f4f7ff] px-[20px] py-[7px] rounded-full">
+        <div class="flex items-center gap-[25px]">
+            <div class="flex items-center gap-[8px] bg-[#f4f7ff] px-[20px] py-[5px] rounded-full">
                 <img class="h-[22px]" src="./assets/checkbox.png" alt="icone">
                 <p id="addCount" class="font-bold text-[22px] text-[#1E1E1E]">23</p>
             </div>
             <button class="p-[8px] bg-[#f4f7ff] rounded-full transition-transform duration-300" id="rotateBtn"
                 onclick="changeBgColor()">
-                <img src="./assets/theme-btn.png" alt="">
+                <img class="h-[28px]" src="./assets/theme-btn.png" alt="">
             </button>
         </div>
     </header>
 
     <!-- Main Section -->
-    <main class="grid grid-cols-4 gap-[25px] pt-[25px]">
-        <div class="bg-[#ffffff] col-span-3 rounded-2xl h-full w-full p-[20px]">
+    <main class="grid md:grid-cols-4 gap-[20px] pt-[25px]">
+        <div class="bg-[#ffffff] md:col-span-3 rounded-2xl h-full w-full md:p-[20px]">
+            <!-- Main section Header  -->
             <div
-                class="flex items-center justify-between gap-[20px] pb-[30px] border-b-[3px] border-[#e3eafb] border-dashed">
-                <div class="bg-[#f4f7ff] w-[25%]  h-[180px] rounded-2xl flex items-center justify-center gap-[18px]">
-                    <figure class="h-[60px] w-[60px] bg-[#fff] flex items-center justify-center rounded-full">
-                        <img src="./assets/checkbox.png" alt="icone">
+                class="flex items-center justify-between gap-[15px] pb-[30px] border-b-[3px] border-[#e3eafb] border-dashed">
+                <div class="bg-[#f4f7ff] w-[28%]  h-[160px] rounded-2xl flex items-center justify-center gap-[14px]">
+                    <figure class="h-[50px] w-[50px] bg-[#fff] flex items-center justify-center rounded-full">
+                        <img class="h-[25px]" src="./assets/checkbox.png" alt="icone">
                     </figure>
                     <div>
-                        <h4 class="font-medium text-[18px] text-[#00303C]">Task Assiged</h4>
-                        <h4 id="taskAssiged" class="font-bold text-[25px] text-[#00303C]">6</h4>
+                        <h4 class="font-medium text-[16px] text-[#00303C]">Task Assiged</h4>
+                        <h4 id="taskAssiged" class="font-bold text-[22px] text-[#00303C]">6</h4>
                     </div>
                 </div>
                 <div id="question"
-                    class="w-[50%] cursor-pointer bg-gradient-to-l from-[#8397fa] to-[#5371fe] h-[180px] rounded-2xl flex items-center justify-center gap-[18px]">
-                    <img class="h-[105px]" src="./assets/board.png" alt="">
-                    <h2 class="text-[#fff] text-[22px] font-medium">Discover Something New Today!</h2>
+                    class="w-[44%] cursor-pointer bg-gradient-to-l from-[#8397fa] to-[#5371fe] h-[160px] rounded-2xl flex items-center justify-center gap-[8px]">
+                    <img class="h-[60px]" src="./assets/board.png" alt="">
+                    <h2 class="text-[#fff] text-[17px] font-medium">Discover Something New Today!</h2>
                 </div>
-                <div class="bg-[#f4f7ff] w-[25%]  h-[180px] rounded-2xl flex items-center justify-center gap-[18px]">
-                    <figure class="h-[60px] w-[60px] bg-[#fff] flex items-center justify-center rounded-full">
-                        <img src="./assets/calender.png" alt="">
+                <div class="bg-[#f4f7ff] w-[28%]  h-[160px] rounded-2xl flex items-center justify-center gap-[14px]">
+                    <figure class="h-[50px] w-[50px] bg-[#fff] flex items-center justify-center rounded-full">
+                        <img class="h-[25px]" src="./assets/calender.png" alt="">
                     </figure>
-                    <h4 id="date" class="font-medium text-[18px] pt-[18px] text-[#00303C]"></h4>
+                    <h4 id="date" class="font-medium text-[16px] text-[#00303C]"></h4>
                 </div>
             </div>
-            <div class="grid grid-cols-3 gap-[30px] pt-[30px]">
-                <div class="bg-[#f4f7ff] p-[25px] rounded-2xl">
-                    <h4 class="py-[10px] px-[40px] rounded-full bg-[#fff] text-[#00303C] font-bold inline-block">Shop
+
+            <!-- Card Section Hear -->
+            <div class="grid grid-cols-3 gap-[15px] pt-[30px]">
+                <div class="bg-[#f4f7ff] p-[18px] rounded-2xl">
+                    <h4 class="py-[8px] px-[30px] rounded-full bg-[#fff] text-[#00303C] font-medium inline-block">Shop
                         Easy</h4>
-                    <h2 class="cardHeader font-bold text-[22px] py-[14px] text-[#00303C]">Fix Mobile Button Issue</h2>
-                    <p class="text-[16px] font-medium text-gray-500 bg-[#fff] p-[15px] rounded-md">
+                    <h2 class="cardHeader font-bold text-[18px] py-[10px] text-[#00303C]">Fix Mobile Button Issue</h2>
+                    <p class="text-justify text-gray-500 bg-[#fff] p-[10px] rounded-md leading-[20px] text-[15px]">
                         A Card Component has a figure a body part, and inside body there are title
                         and actions parts
                     </p>
-                    <div class="pt-[22px] flex items-center justify-between">
+                    <div class="pt-[10px] flex items-center justify-between">
                         <div>
-                            <p class="text-[18px] text-[#00303C]">Deadline</p>
-                            <p class="cardDate text-[16px] font-medium text-[#00303C]">18 March 2006</p>
+                            <p class="text-[16px] text-[#00303C]">Deadline</p>
+                            <p class="cardDate text-[15px] text-[#00303C]">18 March 2006</p>
                         </div>
                         <div>
                             <button onclick="cardBtn(this)" data-card-header="Fix Mobile Button Issue"
                                 data-card-date="18 March 2006"
-                                class="card-btn py-[12px] px-[30px] bg-[#3752FD] text-[#fff] font-medium text-[17px] rounded-lg">
+                                class="card-btn py-[8px] px-[15px] bg-[#3752FD] text-[#fff] text-[16px] rounded-lg">
                                 Completed
                             </button>
                         </div>
                     </div>
                 </div>
-                <div class="bg-[#f4f7ff] p-[25px] rounded-2xl">
-                    <h4 class="py-[10px] px-[40px] rounded-full bg-[#fff] text-[#00303C] font-bold inline-block">Soft
+
+                <div class="bg-[#f4f7ff] p-[18px] rounded-2xl">
+                    <h4 class="py-[8px] px-[30px] rounded-full bg-[#fff] text-[#00303C] font-medium inline-block">Soft
                         Pay</h4>
-                    <h2 class="cardHeader font-bold text-[22px] py-[14px] text-[#00303C]">Add Pay Success Modal</h2>
-                    <p class="text-[16px] font-medium text-gray-500 bg-[#fff] p-[15px] rounded-md">
+                    <h2 class="cardHeader font-bold text-[18px] py-[10px] text-[#00303C]">Add Pay Success Modal</h2>
+                    <p class="text-justify text-gray-500 bg-[#fff] p-[10px] rounded-md leading-[20px] text-[15px]">
                         A Card Component has a figure a body part, and inside body there are title
                         and actions parts
                     </p>
-                    <div class="pt-[22px] flex items-center justify-between">
+                    <div class="pt-[10px] flex items-center justify-between">
                         <div>
-                            <p class="text-[18px] text-[#00303C]">Deadline</p>
-                            <p class="cardDate text-[16px] font-medium text-[#00303C]">16 April 2006</p>
+                            <p class="text-[16px] text-[#00303C]">Deadline</p>
+                            <p class="cardDate text-[15px] font-medium text-[#00303C]">16 April 2006</p>
                         </div>
                         <div>
                             <button onclick="cardBtn(this)" data-card-header="Add Pay Success Modal"
                                 data-card-date="16 April 2006"
-                                class="card-btn py-[12px] px-[30px] bg-[#3752FD] text-[#fff] font-medium text-[17px] rounded-lg">
+                                class="card-btn py-[8px] px-[15px] bg-[#3752FD] text-[#fff] text-[16px] rounded-lg">
                                 Completed
                             </button>
                         </div>
                     </div>
                 </div>
-                <div class="bg-[#f4f7ff] p-[25px] rounded-2xl">
-                    <h4 class="py-[10px] px-[40px] rounded-full bg-[#fff] text-[#00303C] font-bold inline-block">Meta
+
+                <div class="bg-[#f4f7ff] p-[18px] rounded-2xl">
+                    <h4 class="py-[8px] px-[30px] rounded-full bg-[#fff] text-[#00303C] font-medium inline-block">Meta
                     </h4>
-                    <h2 class="cardHeader font-bold text-[22px] py-[14px] text-[#00303C]">Add New Reaction</h2>
-                    <p class="text-[16px] font-medium text-gray-500 bg-[#fff] p-[15px] rounded-md">
+                    <h2 class="cardHeader font-bold text-[18px] py-[10px] text-[#00303C]">Add New Reaction</h2>
+                    <p class="text-justify text-gray-500 bg-[#fff] p-[10px] rounded-md leading-[20px] text-[15px]">
                         A Card Component has a figure a body part, and inside body there are title
                         and actions parts
                     </p>
-                    <div class="pt-[22px] flex items-center justify-between">
+                    <div class="pt-[10px] flex items-center justify-between">
                         <div>
-                            <p class="text-[18px] text-[#00303C]">Deadline</p>
-                            <p class="cardDate text-[16px] font-medium text-[#00303C]">31 March 2025</p>
+                            <p class="text-[16px] text-[#00303C]">Deadline</p>
+                            <p class="cardDate text-[15px] font-medium text-[#00303C]">31 March 2025</p>
                         </div>
                         <div>
                             <button onclick="cardBtn(this)" data-card-header="Add New Reaction"
                                 data-card-date="31 March 2025"
-                                class="card-btn py-[12px] px-[30px] bg-[#3752FD] text-[#fff] font-medium text-[17px] rounded-lg">
+                                class="card-btn py-[8px] px-[15px] bg-[#3752FD] text-[#fff] text-[16px] rounded-lg">
                                 Completed
                             </button>
                         </div>
                     </div>
                 </div>
-                <div class="bg-[#f4f7ff] p-[25px] rounded-2xl">
-                    <h4 class="py-[10px] px-[40px] rounded-full bg-[#fff] text-[#00303C] font-bold inline-block">
+
+                <div class="bg-[#f4f7ff] p-[18px] rounded-2xl">
+                    <h4 class="py-[8px] px-[30px] rounded-full bg-[#fff] text-[#00303C] font-medium inline-block">
                         Programming Hero</h4>
-                    <h2 class="cardHeader font-bold text-[22px] py-[14px] text-[#00303C]">Fix Video Loading Issue</h2>
-                    <p class="text-[16px] font-medium text-gray-500 bg-[#fff] p-[15px] rounded-md">
+                    <h2 class="cardHeader font-bold text-[18px] py-[10px] text-[#00303C]">Fix Video Loading Issue</h2>
+                    <p class="text-justify text-gray-500 bg-[#fff] p-[10px] rounded-md leading-[20px] text-[15px]">
                         A Card Component has a figure a body part, and inside body there are title
                         and actions parts
                     </p>
-                    <div class="pt-[22px] flex items-center justify-between">
+                    <div class="pt-[10px] flex items-center justify-between">
                         <div>
-                            <p class="text-[18px] text-[#00303C]">Deadline</p>
-                            <p class="cardDate text-[16px] font-medium text-[#00303C]">21 March 2025</p>
+                            <p class="text-[16px] text-[#00303C]">Deadline</p>
+                            <p class="cardDate text-[15px] font-medium text-[#00303C]">21 March 2025</p>
                         </div>
                         <div>
                             <button onclick="cardBtn(this)" data-card-header="Fix Video Loading Issue"
                                 data-card-date="21 March 2025"
-                                class="card-btn py-[12px] px-[30px] bg-[#3752FD] text-[#fff] font-medium text-[17px] rounded-lg">
+                                class="card-btn py-[8px] px-[15px] bg-[#3752FD] text-[#fff] text-[16px] rounded-lg">
                                 Completed
                             </button>
                         </div>
                     </div>
                 </div>
-                <div class="bg-[#f4f7ff] p-[25px] rounded-2xl">
-                    <h4 class="py-[10px] px-[40px] rounded-full bg-[#fff] text-[#00303C] font-bold inline-block">Google
+
+                <div class="bg-[#f4f7ff] p-[18px] rounded-2xl">
+                    <h4 class="py-[8px] px-[30px] rounded-full bg-[#fff] text-[#00303C] font-medium inline-block">Google
                         LLC</h4>
-                    <h2 class="cardHeader font-bold text-[22px] py-[14px] text-[#00303C]">Integrate Al Seacrh</h2>
-                    <p class="text-[16px] font-medium text-gray-500 bg-[#fff] p-[15px] rounded-md">
+                    <h2 class="cardHeader font-bold text-[18px] py-[10px] text-[#00303C]">Integrate Al Seacrh</h2>
+                    <p class="text-justify text-gray-500 bg-[#fff] p-[10px] rounded-md leading-[20px] text-[15px]">
                         A Card Component has a figure a body part, and inside body there are title
                         and actions parts
                     </p>
-                    <div class="pt-[22px] flex items-center justify-between">
+                    <div class="pt-[10px] flex items-center justify-between">
                         <div>
-                            <p class="text-[18px] text-[#00303C]">Deadline</p>
-                            <p class="cardDate text-[16px] font-medium text-[#00303C]">1 April 2025</p>
+                            <p class="text-[16px] text-[#00303C]">Deadline</p>
+                            <p class="cardDate text-[15px] font-medium text-[#00303C]">1 April 2025</p>
                         </div>
                         <div>
                             <button onclick="cardBtn(this)" data-card-header="Integrate Al Seacrh"
                                 data-card-date="1 April 2025"
-                                class="card-btn py-[12px] px-[30px] bg-[#3752FD] text-[#fff] font-medium text-[17px] rounded-lg">
+                                class="card-btn py-[8px] px-[15px] bg-[#3752FD] text-[#fff] text-[16px] rounded-lg">
                                 Completed
                             </button>
                         </div>
                     </div>
                 </div>
-                <div class="bg-[#f4f7ff] p-[25px] rounded-2xl">
-                    <h4 class="py-[10px] px-[40px] rounded-full bg-[#fff] text-[#00303C] font-bold inline-block">Polygon
+
+                <div class="bg-[#f4f7ff] p-[18px] rounded-2xl">
+                    <h4 class="py-[8px] px-[30px] rounded-full bg-[#fff] text-[#00303C] font-medium inline-block">
+                        Polygon
                         Tech</h4>
-                    <h2 class="cardHeader font-bold text-[22px] py-[14px] text-[#00303C]">Review Ami Probashi Site</h2>
-                    <p class="text-[16px] font-medium text-gray-500 bg-[#fff] p-[15px] rounded-md">
+                    <h2 class="cardHeader font-bold text-[18px] py-[10px] text-[#00303C]">Review Ami Probashi Site</h2>
+                    <p class="text-justify text-gray-500 bg-[#fff] p-[10px] rounded-md leading-[20px] text-[15px]">
                         A Card Component has a figure a body part, and inside body there are title
                         and actions parts
                     </p>
-                    <div class="pt-[22px] flex items-center justify-between">
+                    <div class="pt-[10px] flex items-center justify-between">
                         <div>
-                            <p class="text-[18px] text-[#00303C]">Deadline</p>
-                            <p class="cardDate text-[16px] font-medium text-[#00303C]">5 May 2025</p>
+                            <p class="text-[16px] text-[#00303C]">Deadline</p>
+                            <p class="cardDate text-[15px] font-medium text-[#00303C]">5 May 2025</p>
                         </div>
                         <div>
                             <button onclick="cardBtn(this)" data-card-header="Review Ami Probashi Site"
                                 data-card-date="5 May 2025"
-                                class="card-btn py-[12px] px-[30px] bg-[#3752FD] text-[#fff] font-medium text-[17px] rounded-lg">
+                                class="card-btn py-[8px] px-[15px] bg-[#3752FD] text-[#fff] text-[16px] rounded-lg">
                                 Completed
                             </button>
                         </div>
@@ -191,19 +200,21 @@
                 </div>
             </div>
         </div>
-        <div class="bg-[#ffffff] rounded-2xl w-full h-full p-[20px]">
+
+        <!-- right side -->
+        <div class="bg-[#ffffff] col-span-1 rounded-2xl w-full h-full p-[20px]">
             <div
-                class="flex flex-col items-center justify-between gap-[20px] pb-[30px] border-b-[3px] border-[#e3eafb] border-dashed">
+                class="flex flex-col items-center justify-between gap-[12px] pt-[15px] pb-[35px] border-b-[3px] border-[#e3eafb] border-dashed">
                 <div class="flex items-center gap-[10px]">
                     <img src="./assets/activity.png" alt="icone">
-                    <h4 class="text-[#00303C]">Activity Log</h4>
+                    <h4 class="text-[16px] font-medium text-[#00303C]">Activity Log</h4>
                 </div>
                 <button onclick="clearCard()"
-                    class="py-[12px] px-[30px] bg-[#3752FD] text-[#fff] font-medium text-[17px] rounded-lg">
+                    class="py-[9px] px-[30px] bg-[#3752FD] text-[#fff] text-[16px] rounded-lg hover:bg-[#fff] hover:text-[#00303C] clear-card active:scale-[.9] duration-500">
                     Clear History
                 </button>
             </div>
-            <ul id="listItem" class="flex flex-col gap-[15px] pt-[30px]"></ul>
+            <ul id="listItem" class="flex flex-col gap-[12px] pt-[30px]"></ul>
         </div>
     </main>
 
