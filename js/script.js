@@ -10,6 +10,10 @@ let listItem = document.getElementById("listItem");
 document.getElementById("question").addEventListener("click", function () {
     window.location.href = "./question.html"
 })
+function goHome() {
+    window.location.href = "./index.html"
+}
+
 
 
 // Date format 
