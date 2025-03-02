@@ -1,6 +1,3 @@
-const date = new Date();
-document.getElementById("date").innerText = date.toDateString();
-
 let taskAssiged = document.getElementById("taskAssiged").innerText;
 let convertedTeskAss = Number(taskAssiged);
 
@@ -9,6 +6,15 @@ let convertedAddCount = Number(addCount);
 let listItem = document.getElementById("listItem");
 
 
+// Routing
+document.getElementById("question").addEventListener("click", function () {
+    window.location.href = "./question.html"
+})
+
+
+// Date format 
+const date = new Date();
+document.getElementById("date").innerText = date.toDateString();
 
 
 
@@ -23,14 +29,17 @@ function cardBtn(btn) {
         const li = document.createElement("li");
         let cardHeader = btn.getAttribute("data-card-header");
         let cardDate = btn.getAttribute("data-card-date");
-        li.innerText = cardHeader + cardDate;
+        li.innerText = "You have Complete The Task" + " " + cardHeader + " " + "At" + " " + cardDate;
+        li.style.backgroundColor = "#f4f7ff"
+        li.style.color = "#000000"
+        li.style.padding = "20px"
+        li.style.borderRadius = "10px"
         listItem.appendChild(li)
-        alert("Just Ok")
+        alert("Board updated Successfully")
     }
     if (convertedTeskAss === 0) {
-        alert("All Ok")
+        alert("congrates!!! You have Completed all the current task")
     }
-
 }
 
 
@@ -44,9 +53,7 @@ function changeBgColor() {
 }
 
 
-
-
-// Routing
-document.getElementById("question").addEventListener("click", function () {
-    window.location.href = "./question.html"
-})
+// Clear Button Function 
+function clearCard() {
+    document.getElementById("listItem").innerHTML = "";
+}

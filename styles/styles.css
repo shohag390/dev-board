@@ -5,5 +5,5 @@ body {
 }
 
 button:disabled {
-    background: gray;
+    background: #3751fd5c;
 }
